@@ -1,21 +1,10 @@
 def display_main_menu():
-    """
-    Show instructions to the user.
-    Lab says to display:
-    "Enter some numbers separated by commas (e.g. 5, 67, 32)"
-    """
+  
     print("Enter some numbers separated by commas (e.g. 5, 67, 32)")
 
 
 def get_user_input():
-    """
-    1. Read from console a sequence of numbers separated by commas.
-    2. Split by ',' into a list of strings.
-    3. Convert that list of strings into a list of floats.
-    4. Return the list of floats.
-
-    This matches Table 4 in the lab. :contentReference[oaicite:8]{index=8}
-    """
+   
     raw = input("Your input: ")
 
     # Step 2: split into list of strings
@@ -33,10 +22,7 @@ def get_user_input():
 
 
 def calc_average_temperature(temp_list):
-    """
-    Return the average (mean) of all numbers in temp_list.
-    Lab Exercise 4 describes this. :contentReference[oaicite:9]{index=9}
-    """
+  
     if len(temp_list) == 0:
         return 0.0
     total = 0.0
@@ -47,11 +33,7 @@ def calc_average_temperature(temp_list):
 
 
 def calc_min_max_temperature(temp_list):
-    """
-    Return a 2-value list [min_temp, max_temp].
-    Lab Exercise 4 says: "return an integer list with 2 values for minimum and maximum temperature."
-    We'll just return numbers; if you want int specifically you can cast.
-    """
+   
     if len(temp_list) == 0:
         return [None, None]
 
@@ -69,13 +51,7 @@ def calc_min_max_temperature(temp_list):
 
 
 def calc_median_temperature(temp_list):
-    """
-    Additional Exercise 6:
-    1. Sort the list in ascending order.
-    2. Return the median value.
-       - If odd length: middle element
-       - If even length: average of the two middle elements
-    """
+   
     n = len(temp_list)
     if n == 0:
         return None
@@ -118,8 +94,6 @@ def main():
     print("Median temperature:", median_temp)
 
 
-# This lets Lab2.py act as the main entry point
-# exactly like the lab shows with:
-# if __name__ == "__main__": main()  :contentReference[oaicite:11]{index=11}
+
 if __name__ == "__main__":
     main()
